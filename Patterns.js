@@ -99,6 +99,23 @@ class Solution {
       console.log(s);
     }
   }
+
+  /**
+  * Pattern 7: Half Pyramid
+  * Output (n=4):
+  *   *
+  *  ***
+ *  *****
+ * *******
+ */
+ pattern7(n) {
+    for (let i=1; i<=n; i++){
+      let s = " "
+      s+=s.repeat(n-i)
+      s+=('*').repeat(2*i-1)
+      console.log(s)
+    }
+  }
 }
 
 // ============================================
@@ -123,3 +140,4 @@ solution.pattern5(4);
 
 console.log("\nPattern 6 (n=5):");
 solution.pattern6(5);
+
