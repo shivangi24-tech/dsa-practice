@@ -118,26 +118,28 @@ class Solution {
   }
 }
 
-// ============================================
-// Demo Usage
-// ============================================
+ /**
+  * Pattern 8: Half Pyramid
+  * Output (n=4):
+  * *********
+  *  *******
+  *   *****
+  *    ***
+  *     *
+  */
+  pattern8(n) {
+    for(let i=n; i>0; i--){
+        let s = ""
+        for(let j=1; j<=n-i; j++){
+          s+= " "
+         }
+        for(let k =1; k<=(2*i-1); k++){
+           s+= '*'
+         }
+      console.log(s)
+    }
+  }
+
 const solution = new Solution();
 
-console.log("Pattern 1 (n=4):");
-solution.pattern1(4);
-
-console.log("\nPattern 2 (n=4):");
-solution.pattern2(4);
-
-console.log("\nPattern 3 (n=5):");
-solution.pattern3(5);
-
-console.log("\nPattern 4 (n=4):");
-solution.pattern4(4);
-
-console.log("\nPattern 5 (n=4):");
-solution.pattern5(4);
-
-console.log("\nPattern 6 (n=5):");
-solution.pattern6(5);
 
