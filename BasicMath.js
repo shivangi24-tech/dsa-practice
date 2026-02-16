@@ -17,6 +17,15 @@ class BasicMath {
     }
     return s;
   }
+
+   isPalindrome(n) {
+      let s = 0
+      for (let num = n; num > 0; num = Math.floor(num / 10)) {
+         const digit = num % 10
+         s = s * 10 + digit
+      }
+      return s === n
+  }
 }
 
 // Example usage:
@@ -26,3 +35,5 @@ const math = new BasicMath();
 const number = 12345;
 console.log(`The number of digits in ${number} is:`, math.countDigit(number));
 console.log(`The reverse of ${number} is:`, math.reverseNumber(number));
+console.log(`The number ${number} is:`, math.isPalindrome(number));
+
