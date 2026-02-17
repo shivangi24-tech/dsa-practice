@@ -26,6 +26,36 @@ class BasicMath {
       }
       return s === n
   }
+  GCD(n1, n2) {
+        const smaller = n1 > n2 ? n2 : n1
+        let gcd = 1
+        for (let i = 1; i <= smaller; i++) {
+            if (n1 % i === 0 && n2 % i === 0) {
+                gcd = i
+            }
+        }
+        return gcd
+        // Optimized Solution
+              // while(n2 !== 0) {
+             //    let temp = n2
+             //     n2 = n1 % n2
+            //     n1 = temp
+           // }
+          // return n1 
+    }
+    isArmstrong(n) {
+        let digitCount = 0
+        let numArr = []
+        let newNum = 0
+        for (let num = n; num > 0; num = Math.floor(num / 10)) {
+            numArr.push(num % 10)
+            digitCount++
+        }
+        for (let i = 0; i < numArr.length; i++) {
+            newNum += Math.pow(numArr[i], digitCount)
+        }
+        return newNum === n
+    }
 }
 
 // Example usage:
@@ -36,4 +66,5 @@ const number = 12345;
 console.log(`The number of digits in ${number} is:`, math.countDigit(number));
 console.log(`The reverse of ${number} is:`, math.reverseNumber(number));
 console.log(`The number ${number} is:`, math.isPalindrome(number));
+
 
