@@ -45,7 +45,7 @@ class BasicMath {
     }
     isArmstrong(n) {
         let digitCount = 0
-        let numArr = []
+        let numArr = []                 //this can be done without using an array to reduce space complexity
         let newNum = 0
         for (let num = n; num > 0; num = Math.floor(num / 10)) {
             numArr.push(num % 10)
@@ -66,5 +66,6 @@ const number = 12345;
 console.log(`The number of digits in ${number} is:`, math.countDigit(number));
 console.log(`The reverse of ${number} is:`, math.reverseNumber(number));
 console.log(`The number ${number} is:`, math.isPalindrome(number));
+
 
 
