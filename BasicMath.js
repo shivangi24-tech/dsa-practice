@@ -56,6 +56,30 @@ class BasicMath {
         }
         return newNum === n
     }
+
+  isPrime(n) {
+        if(n <= 1) {
+            return false
+        }
+        for(let i = 2; i < n; i++) {
+            if(n%i === 0){
+                return false
+            }
+           
+        }
+         return true
+    }
+
+  divisors(n) {
+        const divArray = []
+        for (let i = 1; i <= n; i++) {
+            if (n % i == 0) {
+                divArray.push(i)
+            }
+        }
+        return divArray
+
+    }
 }
 
 // Example usage:
@@ -66,6 +90,7 @@ const number = 12345;
 console.log(`The number of digits in ${number} is:`, math.countDigit(number));
 console.log(`The reverse of ${number} is:`, math.reverseNumber(number));
 console.log(`The number ${number} is:`, math.isPalindrome(number));
+
 
 
 
